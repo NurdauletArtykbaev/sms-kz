@@ -1,0 +1,31 @@
+{
+    "name": "nurdaulet/sms-kz",
+    "description": "Sms provider kz",
+    "license": "proprietary",
+    "autoload": {
+        "psr-4": {
+            "Nurdaulet\\KzSmsProvider\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Nurdaulet"
+        }
+    ],
+    "require": {
+        "php": "^8.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^8.11"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Nurdaulet\\KzSmsProvider\\SmsServiceProvider"
+            ],
+            "aliases": {
+                "SmsKz": "Nurdaulet\\KzSmsProvider\\Facades\\Sms"
+            }
+        }
+    }
+}
