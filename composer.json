@@ -22,10 +22,8 @@
         "laravel": {
             "providers": [
                 "Nurdaulet\\KzSmsProvider\\SmsServiceProvider"
-            ],
-            "aliases": {
-                "SmsKz": "Nurdaulet\\KzSmsProvider\\Facades\\Sms"
-            }
+            ]
+
         }
     }
 }
