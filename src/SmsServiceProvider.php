@@ -21,9 +21,9 @@ class SmsServiceProvider extends ServiceProvider
             $this->commands([
                 SmsPublishCommand::class,
             ]);
-            if (!file_exists(config_path('sms-kz.php'))) {
-                Artisan::call('sms_kz:publish');
-            }
+//            if (!file_exists(config_path('sms-kz.php'))) {
+//                Artisan::call('sms_kz:publish');
+//            }
         }
     }
 
