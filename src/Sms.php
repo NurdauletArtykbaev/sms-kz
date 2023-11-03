@@ -2,7 +2,7 @@
 
 namespace Nurdaulet\KzSmsProvider;
 
-use Nurdaulet\KzSmsProvider\Facades\SMS as SmsFacade;
+use Nurdaulet\KzSmsProvider\Facades\SmsKzFacade;
 use Nurdaulet\KzSmsProvider\Jobs\SendSmsJob;
 
 class Sms
@@ -33,7 +33,7 @@ class Sms
     {
         match (config('sms-kz.connection', 'sync')) {
             'queue' => SendSmsJob::dispatch($this)->onQueue('notification'),
-            'sync'  => SmsFacade::send($this)
+            'sync'  => SmsKzFacade::send($this)
         };
     }
 
