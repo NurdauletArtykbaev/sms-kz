@@ -27,7 +27,7 @@ class SmscDriver implements SmsDriverInterface
             'login'     => $this->login,
             'psw'       => $this->password,
             'phones'    => $sms->receiver,
-            'sender'    => $this->senderName,
+            //'sender'    => $this->senderName,
             'from'      => $this->senderName,
             'mes'       => $sms->text
         ]);
